@@ -6,7 +6,8 @@ import './index.css'
 import { Provider } from 'react-redux'
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "./pages/User.jsx";
-
+import bankReducer from "./Redux/bankSlice.jsx"
+import {dataReducer} from "./Reducer/reducer.jsx"
 // import themeReducer from "./features/theme";
 import thunk from 'redux-thunk';
 
@@ -14,7 +15,8 @@ import thunk from 'redux-thunk';
 const store = configureStore({
   reducer: {
     user: userReducer,
-
+    bank: bankReducer,
+    data:dataReducer,
     // theme: themeReducer,
   },
   middleware:[thunk]
